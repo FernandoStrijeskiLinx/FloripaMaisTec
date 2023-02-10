@@ -1,14 +1,14 @@
 public class Filme {
 
-    private string NomeFilme { get; set; }
-    private string Categoria { get; set; }
+    private string nomeFilme;
+    private string categoria;
     
     public Filme(string nomeFilme, string categoria){
-        this.NomeFilme = nomeFilme;
-        this.Categoria = categoria;
+        this.nomeFilme = nomeFilme;
+        this.categoria = categoria;
     }
 
     public string ExibeFilme(){
-        return $"Mensagem “Filme {this.NomeFilme}, Categoria {this.Categoria}";
+        return $"Mensagem “Filme {this.nomeFilme}, Categoria {this.categoria}";
     }    
 }
