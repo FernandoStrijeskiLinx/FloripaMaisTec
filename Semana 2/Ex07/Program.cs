@@ -9,5 +9,5 @@
 // Tipo String
 // Texto formato “Animação {animação}”
 // Instanciar a classe no console conforme mostrado em aula
-
-Animacao.Animacao1("Let it go");
+Exercicio07.Animacao();
+Exercicio07.Animacao("Let it go");
