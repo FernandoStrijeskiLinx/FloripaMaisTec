@@ -19,7 +19,39 @@ do{
         opcao = Console.ReadLine();
     } 
 
-    if(opcao=="1"){    
+    if(opcao=="1"){
+        Console.WriteLine("Você escolheu 'Cadastrar Carro'! Precisamos coletar algumas informações:");        
+        
+        Console.WriteLine("Informe a placa do veículo (contendo hifen):");
+        string placa = Console.ReadLine();
+        
+        while (placa.Trim == ""){
+            Console.WriteLine("Vamos tentar novamente, digite um valor válido: ");
+            placa = Console.ReadLine();
+        }
+
+        Console.WriteLine("Informe o modelo do veículo:");
+        string modelo = Console.ReadLine();
+
+        while (modelo.Trim == ""){
+            Console.WriteLine("Vamos tentar novamente, digite um valor válido: ");
+            modelo = Console.ReadLine();
+        }
+
+        Console.WriteLine("Informe a marca do veículo:");
+        string marca = Console.ReadLine();
+    
+        while (marca.Trim == ""){
+            Console.WriteLine("Vamos tentar novamente, digite um valor válido: ");
+            marca = Console.ReadLine();
+        }
+        
+        Carro carro = new Carro();
+        carro.Placa = placa;
+        carro.Modelo = modelo;
+        carro.Marca = marca;
+
+        carros.Add(carro);
 
     } else if(opcao=="2"){
         Console.WriteLine("Você escolheu 'Marcar Entrada'!:");
@@ -30,5 +62,5 @@ do{
     } else if(opcao=="4"){
         Console.WriteLine("Você escolheu 'Consultar histórico'!:");        
     }
-
+    
 } while(opcao != "5");
