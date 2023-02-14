@@ -11,19 +11,19 @@ namespace Estacionamento
         public DateTime Entrada { get; set; }
         public DateTime Saida { get; set; }
         public bool Ativo { get; set; }        
-    }
 
-    public Ticket(double valorMinuto)
-    {
-        this.valorMinuto = valorMinuto;
-    }
+        public Ticket(double valorPorMinuto)
+        {
+            this.valorMinuto = valorPorMinuto;
+        }
 
-    public double CalcularTempo(){
-        TimeSpan tempo = Saida - Entrada;
-        return tempo.TotalMinutes();
-    }
-    
-    public double CalcularValor(){
-        return CacularTempo() * this.valorMinuto;
+        public double CalcularTempo(){
+            var tempo = this.Saida - this.Entrada;
+            return tempo.TotalMinutes;
+        }
+        
+        public double CalcularValor(){
+            return CalcularTempo() * this.valorMinuto;    
+        }
     }
 }

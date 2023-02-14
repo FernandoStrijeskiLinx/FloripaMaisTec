@@ -12,5 +12,7 @@ namespace Estacionamento
         public string Cor { get; set; }
         public string Marca { get; set; }
         public List<Ticket> Tickets { get; set; }
+
+        public static List<Carro> carrosExistentes = new List<Carro>();
     }
 }
