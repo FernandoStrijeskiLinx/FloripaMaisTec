@@ -48,5 +48,12 @@ namespace Estacionamento
             Console.WriteLine("Carro cadastrado com sucesso! Pressione uma tecla para continuar...");
             Console.ReadLine();
         }
+
+        public static Carro ObterCarro(string placa){
+            if(placa.Trim()!=""){
+                return carrosExistentes.Find(x => x.Placa == placa);
+            }
+            return null;
+        }
     }
 }
