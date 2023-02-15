@@ -14,10 +14,19 @@ namespace Estacionamento
         public string Marca { get; set; }
         public List<Ticket> Tickets { get; set; }
 
+        public Carro()
+        {
+            Tickets = new List<Ticket>();
+        }
         public static void CadastrarCarro(){
             Console.WriteLine("Informe a placa do veículo (contendo hifen):");
             string placa = Console.ReadLine();
             
+            if(Carro.ObterCarro(placa) != null){
+                Console.WriteLine("Veículo já cadastrado com essa placa! Pressione uma tecla para continuar...");                
+                Console.ReadLine();
+                return;
+            }
             while (placa.Trim() == ""){
                 Console.WriteLine("Vamos tentar novamente, digite um valor válido: ");
                 placa = Console.ReadLine();
@@ -45,7 +54,7 @@ namespace Estacionamento
             carro.Marca = marca;
 
             carrosExistentes.Add(carro);
-            Console.WriteLine("Carro cadastrado com sucesso! Pressione uma tecla para continuar...");
+            Console.WriteLine("Veículo cadastrado com sucesso! Pressione uma tecla para continuar...");
             Console.ReadLine();
         }
 
