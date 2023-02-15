@@ -1,5 +1,4 @@
 ﻿using Estacionamento;
-double valorMinuto = 0.09d;
 string opcao = "";
 
 do{
@@ -22,13 +21,14 @@ do{
         Carro.CadastrarCarro();
 
     } else if(opcao=="2"){
-        Console.WriteLine("Você escolheu 'Marcar Entrada'!:");
+        Console.WriteLine("Você escolheu 'Marcar Entrada'!");
         
     } else if(opcao=="3"){
-        Console.WriteLine("Você escolheu 'Marcar Saída'!:");
+        Console.WriteLine("Você escolheu 'Marcar Saída'!");
          
     } else if(opcao=="4"){
-        Console.WriteLine("Você escolheu 'Consultar histórico'!:");        
+        Console.WriteLine("Você escolheu 'Consultar histórico'!");
+        Ticket.Historico();
     }
     
 } while(opcao != "5");
