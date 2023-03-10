@@ -9,7 +9,7 @@ CREATE TABLE Fernando (
 );
 
 -- Adiciona UF e telefone na tabela com meu nome
-ALTER TABLE Fernando ADD UF CHAR(2) NULL, Telefone INT NOT NULL;
+ALTER TABLE Fernando ADD UF CHAR(2) NULL, Telefone BIGINT NOT NULL;
 
 -- Apaga a tabela com meu nome
 DROP TABLE Fernando;
